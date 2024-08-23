@@ -1,0 +1,10 @@
+#root {
+  background-color: white;
+  overflow-x: hidden;
+  /* max-width: 1366px; */
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
