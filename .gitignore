@@ -75,3 +75,4 @@ server/*.sln
 server/*.sw?
 server/.env
 
+fly.toml

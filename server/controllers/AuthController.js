@@ -25,7 +25,11 @@ export const signUp = async (req, res, next) => {
     });
 
     if (createdUser) {
-      res.cookie("jwt", createToken(email, createdUser.id), { maxAge });
+      res.cookie("jwt", createToken(email, createdUser.id), {
+        maxAge,
+        sameSite: "None",
+        secure: true,
+      });
       return res.status(201).json({ user: createdUser });
     }
 
@@ -53,7 +57,11 @@ export const login = async (req, res, next) => {
     return res.status(400).send("Incorrect password !");
   }
 
-  res.cookie("jwt", createToken(email, user.id), { maxAge });
+  res.cookie("jwt", createToken(email, user.id), {
+    maxAge,
+    sameSite: "None",
+    secure: true,
+  });
   return res.status(200).json(user);
 };
 
@@ -75,6 +83,8 @@ export const logout = async (req, res, next) => {
   try {
     res.cookie("jwt", "", {
       expires: new Date(Date.now() + 5 * 1000),
+      sameSite: "None",
+      secure: true,
     });
     return res.status(200).send("User logged out successfully");
   } catch (e) {

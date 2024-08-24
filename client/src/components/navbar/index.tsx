@@ -18,6 +18,7 @@ const Navbar = () => {
           withCredentials: true,
         });
         if (response.status === 200) {
+          console.log(response.data.user);
           setUserInfo(response.data.user);
         }
       } catch (error) {

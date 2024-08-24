@@ -10,6 +10,7 @@ import { redirectUrl } from "./controllers/UrlsController.js";
 const app = express();
 dotenv.config();
 const allowOrigins = [process.env.ALLOWED_ORIGIN, "http://localhost:5000"];
+console.log(allowOrigins);
 app.use(
   cors({
     origin: allowOrigins,
@@ -18,10 +19,11 @@ app.use(
     preflightContinue: false,
   })
 );
+app.set("trust proxy", 1);
 app.use(cookieParser());
 app.use(express.json());
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const databaseUrl = process.env.DATABASE_URL;
 
 app.use("/api/auth", authRouter);
