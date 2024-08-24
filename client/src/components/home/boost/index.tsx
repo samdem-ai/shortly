@@ -6,9 +6,11 @@ const Boost = () => {
       <h3 className="text-3xl poppins-bold text-white lg:text-4xl">
         Boost your links today
       </h3>
-      <Button className="text-lg tracking-wider rounded-full py-7 px-10 bg-[var(--cyan)] poppins-bold">
-        Get Started
-      </Button>
+      <a href="/auth">
+        <Button className="text-lg tracking-wider rounded-full py-7 px-10 bg-[var(--cyan)] poppins-bold">
+          Get Started
+        </Button>
+      </a>
     </div>
   );
 };

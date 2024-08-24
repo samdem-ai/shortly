@@ -133,7 +133,7 @@ const Navbar = () => {
             {links.map((link) => (
               <a
                 key={link.name}
-                className="text-[var(--gray)] poppins-medium"
+                className="text-[var(--gray)] poppins-medium hover:underline z-10"
                 href={link.link}
               >
                 {link.name}
@@ -160,7 +160,10 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <a className="text-[var(--gray)] poppins-semibold" href="/auth">
+                <a
+                  className="text-[var(--gray)] poppins-semibold hover:underline"
+                  href="/auth"
+                >
                   Login
                 </a>
                 <a href="/auth">

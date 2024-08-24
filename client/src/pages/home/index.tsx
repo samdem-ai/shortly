@@ -24,9 +24,11 @@ const Home = () => {
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
-          <Button className="text-lg tracking-wider rounded-full py-7 px-10 bg-[var(--cyan)] poppins-bold lg:ms-10">
-            Get Started
-          </Button>
+          <a href="/auth">
+            <Button className="text-lg tracking-wider rounded-full py-7 px-10 bg-[var(--cyan)] poppins-bold lg:ms-10">
+              Get Started
+            </Button>
+          </a>
         </div>
       </div>
       <Shortener />
