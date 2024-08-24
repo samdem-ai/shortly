@@ -84,7 +84,7 @@ const Navbar = () => {
         )}
         <div
           className={`${
-            !isOpen ? "translate-y-[-120vw]" : ""
+            !isOpen ? "translate-y-[-140vw]" : ""
           } transition-all duration-500 absolute bg-[var(--dark-violet)] left-[5%] top-[90%] w-[90%] rounded-lg flex flex-col items-center justify-center gap-5 py-10 lg:hidden`}
         >
           {links.map((link) => (
